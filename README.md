@@ -1,2 +1,3 @@
 # SimpleCPU2
  Updated CPU simulation
+Being new to github, I created multiple copies of the original file in my original file, and rather than sort through them all I just created a new repo. Basic premise is simulation (not emulation) of an actual CPU, built entirely of AND gates and NOT gates. To date, it can add and subtract 8-bit integers from -128 to 127 inclusive. Each bit is represented by a bool, each byte an array of bools, and so far. Next stage is to refine my tests because I just learned that VS has built-in testing functions, then get back to working on the multiplier assembly. So far it can multiply 2 positive integers as long as one of them is not exactly 4, hashtag programming.
