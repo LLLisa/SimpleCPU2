@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace simpleCPU2
@@ -216,148 +216,118 @@ namespace simpleCPU2
             return result;
         }
 
-        static bool[] Multiply(bool[] in1, bool[] in2) //not working yet ?
-        {
-            bool[] temp1 = new bool[8];
-            bool[] temp2 = new bool[8];
-            bool[] temp3 = new bool[8];
-            bool[] temp4 = new bool[8];
-            bool[] temp5 = new bool[8];
-            bool[] temp6 = new bool[8];
-            bool[] temp7 = new bool[8];
-            bool[] temp8 = new bool[8];
-
-            for (int i = 0; i < temp1.Length - 1; i++)
-            {
-                temp1[i] = false;
-            }
-
-            for (int i = 0; i < temp2.Length - 1; i++)
-            {
-                temp2[i] = false;
-            }
-
-            for (int i = 0; i < temp3.Length - 1; i++)
-            {
-                temp3[i] = false;
-            }
-
-            for (int i = 0; i < temp4.Length - 1; i++)
-            {
-                temp4[i] = false;
-            }
-
-            for (int i = 0; i < temp5.Length - 1; i++)
-            {
-                temp5[i] = false;
-            }
-
-            for (int i = 0; i < temp6.Length - 1; i++)
-            {
-                temp6[i] = false;
-            }
-
-            for (int i = 0; i < temp7.Length - 1; i++)
-            {
-                temp7[i] = false;
-            }
-
-            for (int i = 0; i < temp8.Length - 1; i++)
-            {
-                temp8[i] = false;
-            }
-
-            temp1[0] = AndGate(in1[0], in2[0]);
-            temp1[1] = AndGate(in1[1], in2[0]);
-            temp1[2] = AndGate(in1[2], in2[0]);
-            temp1[3] = AndGate(in1[3], in2[0]);
-            temp1[4] = AndGate(in1[4], in2[0]);
-            temp1[5] = AndGate(in1[5], in2[0]);
-            temp1[6] = AndGate(in1[6], in2[0]);
-            temp1[7] = AndGate(in1[7], in2[0]);
-
-            temp2[0] = AndGate(in1[0], in2[1]);
-            temp2[1] = AndGate(in1[1], in2[1]);
-            temp2[2] = AndGate(in1[2], in2[1]);
-            temp2[3] = AndGate(in1[3], in2[1]);
-            temp2[4] = AndGate(in1[4], in2[1]);
-            temp2[5] = AndGate(in1[5], in2[1]);
-            temp2[6] = AndGate(in1[6], in2[1]);
-            temp2[7] = AndGate(in1[7], in2[1]);
-
-            temp3[0] = AndGate(in1[0], in2[2]);
-            temp3[1] = AndGate(in1[1], in2[2]);
-            temp3[2] = AndGate(in1[2], in2[2]);
-            temp3[3] = AndGate(in1[3], in2[2]);
-            temp3[4] = AndGate(in1[4], in2[2]);
-            temp3[5] = AndGate(in1[5], in2[2]);
-            temp3[6] = AndGate(in1[6], in2[2]);
-            temp3[7] = AndGate(in1[7], in2[2]);
-
-            temp4[0] = AndGate(in1[0], in2[3]);
-            temp4[1] = AndGate(in1[1], in2[3]);
-            temp4[2] = AndGate(in1[2], in2[3]);
-            temp4[3] = AndGate(in1[3], in2[3]);
-            temp4[4] = AndGate(in1[4], in2[3]);
-            temp4[5] = AndGate(in1[5], in2[3]);
-            temp4[6] = AndGate(in1[6], in2[3]);
-            temp4[7] = AndGate(in1[7], in2[3]);
-
-            temp5[0] = AndGate(in1[0], in2[4]);
-            temp5[1] = AndGate(in1[1], in2[4]);
-            temp5[2] = AndGate(in1[2], in2[4]);
-            temp5[3] = AndGate(in1[3], in2[4]);
-            temp5[4] = AndGate(in1[4], in2[4]);
-            temp5[5] = AndGate(in1[5], in2[4]);
-            temp5[6] = AndGate(in1[6], in2[4]);
-            temp5[7] = AndGate(in1[7], in2[4]);
-
-            temp6[0] = AndGate(in1[0], in2[5]);
-            temp6[1] = AndGate(in1[1], in2[5]);
-            temp6[2] = AndGate(in1[2], in2[5]);
-            temp6[3] = AndGate(in1[3], in2[5]);
-            temp6[4] = AndGate(in1[4], in2[5]);
-            temp6[5] = AndGate(in1[5], in2[5]);
-            temp6[6] = AndGate(in1[6], in2[5]);
-            temp6[7] = AndGate(in1[7], in2[5]);
-
-            temp7[0] = AndGate(in1[0], in2[6]);
-            temp7[1] = AndGate(in1[1], in2[6]);
-            temp7[2] = AndGate(in1[2], in2[6]);
-            temp7[3] = AndGate(in1[3], in2[6]);
-            temp7[4] = AndGate(in1[4], in2[6]);
-            temp7[5] = AndGate(in1[5], in2[6]);
-            temp7[6] = AndGate(in1[6], in2[6]);
-            temp7[7] = AndGate(in1[7], in2[6]);
-
-            temp8[0] = AndGate(in1[0], in2[7]);
-            temp8[1] = AndGate(in1[1], in2[7]);
-            temp8[2] = AndGate(in1[2], in2[7]);
-            temp8[3] = AndGate(in1[3], in2[7]);
-            temp8[4] = AndGate(in1[4], in2[7]);
-            temp8[5] = AndGate(in1[5], in2[7]);
-            temp8[6] = AndGate(in1[6], in2[7]);
-            temp8[7] = AndGate(in1[7], in2[7]);
-
-            return AddBytes(temp1, LeftShift(temp2, 1)); //multiply 2 first 
-        }
-
-        //TODO Modulus
-        //if num1 is more than num2,
-        //subtract num2 from num1,
-        //else return num1
-        //static int Modulus(int num1, int num2) //refactor to take in bytes of bools
+        //static bool[] Multiply(bool[] in1, bool[] in2) //not working yet ?
         //{
-        //    while (num1 >= num2)
-        //    {
-        //        num1 -= num2;
-        //    }
-        //    return num1;
+        //    bool[] temp1 = new bool[8];
+        //    Array.Fill(temp1, false);
+        //    bool[] temp2 = new bool[8];
+        //    Array.Fill(temp2, false);
+        //    bool[] temp3 = new bool[8];
+        //    Array.Fill(temp3, false);
+        //    bool[] temp4 = new bool[8];
+        //    Array.Fill(temp4, false);
+        //    bool[] temp5 = new bool[8];
+        //    Array.Fill(temp5, false);
+        //    bool[] temp6 = new bool[8];
+        //    Array.Fill(temp6, false);
+        //    bool[] temp7 = new bool[8];
+        //    Array.Fill(temp7, false);
+        //    bool[] temp8 = new bool[8];
+        //    Array.Fill(temp8, false);
+
+
+        //    temp1[0] = AndGate(in1[0], in2[0]);
+        //    temp1[1] = AndGate(in1[1], in2[0]);
+        //    temp1[2] = AndGate(in1[2], in2[0]);
+        //    temp1[3] = AndGate(in1[3], in2[0]);
+        //    temp1[4] = AndGate(in1[4], in2[0]);
+        //    temp1[5] = AndGate(in1[5], in2[0]);
+        //    temp1[6] = AndGate(in1[6], in2[0]);
+        //    temp1[7] = AndGate(in1[7], in2[0]);
+
+        //    temp2[0] = AndGate(in1[0], in2[1]);
+        //    temp2[1] = AndGate(in1[1], in2[1]);
+        //    temp2[2] = AndGate(in1[2], in2[1]);
+        //    temp2[3] = AndGate(in1[3], in2[1]);
+        //    temp2[4] = AndGate(in1[4], in2[1]);
+        //    temp2[5] = AndGate(in1[5], in2[1]);
+        //    temp2[6] = AndGate(in1[6], in2[1]);
+        //    temp2[7] = AndGate(in1[7], in2[1]);
+
+        //    temp3[0] = AndGate(in1[0], in2[2]);
+        //    temp3[1] = AndGate(in1[1], in2[2]);
+        //    temp3[2] = AndGate(in1[2], in2[2]);
+        //    temp3[3] = AndGate(in1[3], in2[2]);
+        //    temp3[4] = AndGate(in1[4], in2[2]);
+        //    temp3[5] = AndGate(in1[5], in2[2]);
+        //    temp3[6] = AndGate(in1[6], in2[2]);
+        //    temp3[7] = AndGate(in1[7], in2[2]);
+
+        //    temp4[0] = AndGate(in1[0], in2[3]);
+        //    temp4[1] = AndGate(in1[1], in2[3]);
+        //    temp4[2] = AndGate(in1[2], in2[3]);
+        //    temp4[3] = AndGate(in1[3], in2[3]);
+        //    temp4[4] = AndGate(in1[4], in2[3]);
+        //    temp4[5] = AndGate(in1[5], in2[3]);
+        //    temp4[6] = AndGate(in1[6], in2[3]);
+        //    temp4[7] = AndGate(in1[7], in2[3]);
+
+        //    temp5[0] = AndGate(in1[0], in2[4]);
+        //    temp5[1] = AndGate(in1[1], in2[4]);
+        //    temp5[2] = AndGate(in1[2], in2[4]);
+        //    temp5[3] = AndGate(in1[3], in2[4]);
+        //    temp5[4] = AndGate(in1[4], in2[4]);
+        //    temp5[5] = AndGate(in1[5], in2[4]);
+        //    temp5[6] = AndGate(in1[6], in2[4]);
+        //    temp5[7] = AndGate(in1[7], in2[4]);
+
+        //    temp6[0] = AndGate(in1[0], in2[5]);
+        //    temp6[1] = AndGate(in1[1], in2[5]);
+        //    temp6[2] = AndGate(in1[2], in2[5]);
+        //    temp6[3] = AndGate(in1[3], in2[5]);
+        //    temp6[4] = AndGate(in1[4], in2[5]);
+        //    temp6[5] = AndGate(in1[5], in2[5]);
+        //    temp6[6] = AndGate(in1[6], in2[5]);
+        //    temp6[7] = AndGate(in1[7], in2[5]);
+
+        //    temp7[0] = AndGate(in1[0], in2[6]);
+        //    temp7[1] = AndGate(in1[1], in2[6]);
+        //    temp7[2] = AndGate(in1[2], in2[6]);
+        //    temp7[3] = AndGate(in1[3], in2[6]);
+        //    temp7[4] = AndGate(in1[4], in2[6]);
+        //    temp7[5] = AndGate(in1[5], in2[6]);
+        //    temp7[6] = AndGate(in1[6], in2[6]);
+        //    temp7[7] = AndGate(in1[7], in2[6]);
+
+        //    temp8[0] = AndGate(in1[0], in2[7]);
+        //    temp8[1] = AndGate(in1[1], in2[7]);
+        //    temp8[2] = AndGate(in1[2], in2[7]);
+        //    temp8[3] = AndGate(in1[3], in2[7]);
+        //    temp8[4] = AndGate(in1[4], in2[7]);
+        //    temp8[5] = AndGate(in1[5], in2[7]);
+        //    temp8[6] = AndGate(in1[6], in2[7]);
+        //    temp8[7] = AndGate(in1[7], in2[7]);
+
+        //    return AddBytes(temp1, LeftShift(temp2, 1)); //multiply 2 first 
         //}
+
+        static bool[] Multiply(bool[] in1, bool[] in2) //works, but better to compare with irl alu functions
+        {
+            int count = Digitize(in1);
+            bool[] memory = new bool[8];
+            Array.Copy(in2, memory, 8);
+
+            while (count > 1)
+            {
+                memory = Add2Bytes(memory, in2);
+                count--;
+            }
+            return memory;
+        }
 
         //if 2 > x, return x
         //else x-=2
-        static int Modulus(int num1, int num2)
+        static int Modulus(int num1, int num2) //refactor to process bool[]s
         {
             if (num1 < num2)
             {
@@ -385,7 +355,45 @@ namespace simpleCPU2
             return str;
         }
 
+        static bool[] Binarize(int in1) //makes bool array[8] from int, works for neg in 2's comp
+        {
+            int parity = in1;
+            bool[] outBool = new bool[8];
 
+            for (int i = 0; i < outBool.Length; i++)
+            {
+                if (in1 % 2 == 0)
+                {
+                    outBool[i] = false;
+                }
+                else
+                {
+                    outBool[i] = true;
+                    in1--;
+                }
+                in1 /= 2;
+            }
+            return outBool;
+        }
+
+        static int Digitize(bool[] in1) 
+        {
+            int result = 0;
+            int[] parser = {1,2,4,8,16,32,64};
+            for (int i = 0; i < 7; i++)
+            {
+                if (in1[i])
+                {
+                    result += parser[i];
+                }
+            }
+            if (in1[7])
+            {
+                result *= -1;
+            }
+
+            return result;
+        }
 
 
         /*----------------------------------------memory under construction uwu------------------------------------------------*/
@@ -412,8 +420,11 @@ namespace simpleCPU2
         {
             return input + latch(input, otherInt);
         }
+        
+        // /////////////////////////////////////////////////////////////////////////////////////start here
 
-
+        //would latch work as an object with an on/off property?
+        //each irl wire is an instance, logic gates changing thir properties
 
         static void Main(string[] args)
         {
@@ -430,153 +441,18 @@ namespace simpleCPU2
             }
             //truthTable(NandGate);
 
-            static bool[] Binarize(int in1) //makes bool array[8] from int, works for neg in 2's comp
-            {
-                int parity = in1;
-                bool[] outBool = new bool[8];
-
-                for (int i = 0; i < outBool.Length; i++)
-                {
-                    if (in1 % 2 == 0)
-                    {
-                        outBool[i] = false;
-                    }
-                    else
-                    {
-                        outBool[i] = true;
-                        in1--;
-                    }
-                    in1 /= 2;
-                }
-                return outBool;
-            }
-
-
-
             //8-bit registers for operations
             //7 bits plus 8th bit for signed integers
             //range= -128 to 127 inclusive
 
-            bool[] addend1 = new bool[8];
-            for (int i = 0; i < addend1.Length - 1; i++)
-            {
-                addend1[i] = false;
-            }
-
-            bool[] addend2 = new bool[8];
-            for (int i = 0; i < addend2.Length - 1; i++)
-            {
-                addend2[i] = false;
-            }
-
-            bool[] addend3 = new bool[8];
-            for (int i = 0; i < addend3.Length - 1; i++)
-            {
-                addend3[i] = false;
-            }
-
-            bool[] addend4 = new bool[8];
-            for (int i = 0; i < addend4.Length - 1; i++)
-            {
-                addend4[i] = false;
-            }
-
-            bool[] addend5 = new bool[8];
-            for (int i = 0; i < addend5.Length - 1; i++)
-            {
-                addend5[i] = false;
-            }
-
-            bool[] addend6 = new bool[8];
-            for (int i = 0; i < addend6.Length - 1; i++)
-            {
-                addend6[i] = false;
-            }
-
-            bool[] addend7 = new bool[8];
-            for (int i = 0; i < addend7.Length - 1; i++)
-            {
-                addend7[i] = false;
-            }
-
-            bool[] addend8 = new bool[8];
-            for (int i = 0; i < addend8.Length - 1; i++)
-            {
-                addend8[i] = false;
-            }
-
-            //!important - value orders are right to left - addend[0] is the digit on the far right (in the ones place)
-            addend1[0] = true; //23
-            addend1[1] = true;
-            addend1[2] = true;
-            addend1[3] = false;
-            addend1[4] = true;
-            addend1[5] = false;
-            addend1[6] = false;
-            addend1[7] = false;
-
-            addend2[0] = true; //73
-            addend2[1] = false;
-            addend2[2] = false;
-            addend2[3] = true;
-            addend2[4] = false;
-            addend2[5] = false;
-            addend2[6] = true;
-            addend2[7] = false;
-
-            addend3[0] = false; //-54
-            addend3[1] = true;
-            addend3[2] = false;
-            addend3[3] = true;
-            addend3[4] = false;
-            addend3[5] = false;
-            addend3[6] = true;
-            addend3[7] = true;
-
-            addend4[0] = false; //-74
-            addend4[1] = true;
-            addend4[2] = true;
-            addend4[3] = false;
-            addend4[4] = true;
-            addend4[5] = true;
-            addend4[6] = false;
-            addend4[7] = true;
-
-            addend5[0] = false; // 2
-            addend5[1] = true;
-            addend5[2] = false;
-            addend5[3] = false;
-            addend5[4] = false;
-            addend5[5] = false;
-            addend5[6] = false;
-            addend5[7] = false;
-
-            addend6[0] = true; // 3
-            addend6[1] = true;
-            addend6[2] = false;
-            addend6[3] = false;
-            addend6[4] = false;
-            addend6[5] = false;
-            addend6[6] = false;
-            addend6[7] = false;
-
-            addend7[0] = false; // 4
-            addend7[1] = false;
-            addend7[2] = true;
-            addend7[3] = false;
-            addend7[4] = false;
-            addend7[5] = false;
-            addend7[6] = false;
-            addend7[7] = false;
-
-            addend8[0] = true; // 5
-            addend8[1] = false;
-            addend8[2] = true;
-            addend8[3] = false;
-            addend8[4] = false;
-            addend8[5] = false;
-            addend8[6] = false;
-            addend8[7] = false;
+            bool[] addend1 = Binarize(23);
+            bool[] addend2 = Binarize(73);
+            bool[] addend3 = Binarize(-54);
+            bool[] addend4 = Binarize(-74);
+            bool[] addend5 = Binarize(2);
+            bool[] addend6 = Binarize(3);
+            bool[] addend7 = Binarize(4);
+            bool[] addend8 = Binarize(5);
 
             //TODO:verify LeftShift
 
@@ -598,26 +474,28 @@ namespace simpleCPU2
             //Console.WriteLine(format(MakeNeg(AddBytes(addend1, addend2))));  //expect 10100000 //-96
             //Console.WriteLine(format(AddBytes(addend2, MakeNeg(addend1))));  //expect 00110010 // 50  //subtracts!
             //Console.WriteLine();
-            Console.WriteLine(format(addend5));                              //expect 00000010 // 2
-            Console.WriteLine(format(LeftShift(addend5, 1)));                //expect 00000100 // 4 
-            Console.WriteLine(format(LeftShift(addend7, 1)));                //expect 00001000 // 4
-            Console.WriteLine();
-            Console.WriteLine(format(LeftShift(addend3, 1)));                //expect 10010100 //-108
-            Console.WriteLine();
-            //Console.WriteLine(format(Multiply(addend5, addend5)));           //expect 00000100 // 4
-            //Console.WriteLine(format(Multiply(addend1, addend5)));           //expect 00101110 // 46
-            //Console.WriteLine(format(Multiply(addend5, addend6)));           //expect 00000110 // 6 
-            //Console.WriteLine(format(Multiply(addend1, addend6)));           //expect 01000101 // 69
-            //Console.WriteLine(format(Multiply(addend7, addend5)));           //expect 00001000 // 8  // works unless 4 is 2nd number?
-            //Console.WriteLine(format(Multiply(addend7, addend8)));           //expect 00010100 // 20 // 4?
-            //Console.WriteLine(format(Multiply(addend8, addend5)));           //expect 00001010 // 10
+            //Console.WriteLine(format(addend5));                              //expect 00000010 // 2
+            //Console.WriteLine(format(LeftShift(addend5, 1)));                //expect 00000100 // 4 
+            //Console.WriteLine(format(LeftShift(addend7, 1)));                //expect 00001000 // 4
+            //Console.WriteLine();
+            //Console.WriteLine(format(LeftShift(addend3, 1)));                //expect 10010100 //-108
+            //Console.WriteLine();
+            Console.WriteLine(format(Multiply(addend5, addend5)));           //expect 00000100 // 4
+            Console.WriteLine(format(Multiply(addend1, addend5)));           //expect 00101110 // 46
+            Console.WriteLine(format(Multiply(addend5, addend6)));           //expect 00000110 // 6 
+            Console.WriteLine(format(Multiply(addend1, addend6)));           //expect 01000101 // 69
+            Console.WriteLine(format(Multiply(addend7, addend5)));           //expect 00001000 // 8  // works unless 4 is 2nd number?
+            Console.WriteLine(format(Multiply(addend7, addend8)));           //expect 00010100 // 20 // 4?
+            Console.WriteLine(format(Multiply(addend8, addend5)));           //expect 00001010 // 10
             //Console.WriteLine(format(Multiply(Binarize(4), Binarize(3))));   //00001100
             //Console.WriteLine();
             //Console.WriteLine(format(Add2Bytes(Binarize(10), MakeNeg(Binarize(7)))));   //expect 00000011
             //Console.WriteLine(format(AddBytes(Binarize(3), Binarize(4), Binarize(8)))); //expect 00001111
             //Console.WriteLine(format(Binarize(-6)));                          //expect 11111010 //-6 
             //Console.WriteLine(format(MakeNeg(Binarize(6))));                  //expect 11111010 //-6
-            Console.WriteLine((Modulus(27, 2)));
+            //Console.WriteLine((Modulus(27, 2)));
+            Console.WriteLine(format(Multiply(addend1, addend8)));              //expect 0110011
+            Console.WriteLine(Digitize(addend3));
         }
     }
 }
